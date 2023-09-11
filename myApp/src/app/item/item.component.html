@@ -1,0 +1,119 @@
+<div class="flex justify-center" *ngIf="product">
+  <div class="">
+    <img src="{{ product.img }}" class="rounded w-[300px] h-[300px] m-5" />
+    <img
+      src="{{ product.img }}"
+      class="rounded w-10 h-10 ml-5 border-green-500 border-2"
+    />
+  </div>
+  <div class="flex text-start m-5 w-52">
+    <div>
+      <p class="text-lg font-bold">{{ product.product_name }}</p>
+      <p class="">{{ product.view }} orang melihat barang ini</p>
+      <p class="text-2xl font-bold">Rp{{ product.price }}</p>
+      <span class="text-sm font-bold">Pilih varian: </span>
+      <span>{{ product.variant[0] }}</span>
+      <div *ngFor="let item of product.variant" class="flex">
+        <button
+          class="m-1 bg-slate-200 border-2 border-slate-200 rounded px-2 text-slate-500 font-medium focus:text-green-500 focus:border-green-500"
+        >
+          {{ item }}
+        </button>
+      </div>
+      <div class="mx-0.5">
+        <div class="flex m-10 border-slate-200 rounded-sm">
+          <button
+            class="rounded border-b-[5px] border-green-500 text-center px-7 text-green-500 font-bold"
+          >
+            Detail
+          </button>
+          <button class="rounded px-7">Info Penting</button>
+        </div>
+      </div>
+      <div>
+        <p>
+          Kodisi: <span class="font-bold">{{ product.kondisi }}</span>
+        </p>
+        <p>
+          Berat Satuan: <span class="font-bold">{{ product.berat }}</span>
+        </p>
+        <a
+          >Kategori:
+          <span class="font-bold text-green-500">{{
+            product.kategori
+          }}</span></a
+        >
+        <p class="w-52">{{ product.deskripsi }}</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card rounded-lg w-72 h-[300px] m-10 border-2 border-slate-100">
+      <p class="font-bold">Atur jumlah dan catatan</p>
+      <p>{{ product.product_name }} {{ product.variant[0] }}</p>
+      <div class="custom-number-input h-10 w-52 gap-5">
+        <div
+          class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1 items-center"
+        >
+          <button
+            data-action="decrement"
+            class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
+          >
+            <span class="m-auto text-2xl font-thin">−</span>
+          </button>
+          <input
+            type="number"
+            class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700"
+            name="custom-input-number"
+            value="1"
+          />
+          <button
+            data-action="increment"
+            class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer"
+          >
+            <span class="m-auto text-2xl font-thin">+</span>
+          </button>
+          <div class="flex">
+            <span>Stock: </span><span class="font-bold">999</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between mt-5">
+        <p>Subtotal</p>
+        <p class="font-bold text-lg">Rp{{ product.price }}</p>
+      </div>
+      <div class="grid grid-cols-1 gap-3">
+        <button
+          (click)="postCart()"
+          class="bg-green-500 block rounded-md py-1 text-white"
+          routerLink="/cart"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+        >
+          + Keranjang
+        </button>
+        <button
+          class="bg-white block rounded-md py-1 text-green-500 border-2 border-green-500"
+        >
+          Beli Langsung
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .custom-number-input input:focus {
+    outline: none !important;
+  }
+
+  .custom-number-input button:focus {
+    outline: none !important;
+  }
+</style>

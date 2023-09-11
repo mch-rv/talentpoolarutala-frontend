@@ -2,20 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-catalogue',
-  templateUrl: './catalogue.component.html',
-  styleUrls: ['./catalogue.component.css']
+  selector: 'app-transaction',
+  templateUrl: './transaction.component.html',
+  styleUrls: ['./transaction.component.css']
 })
-export class CatalogueComponent implements OnInit {
+export class TransactionComponent implements OnInit {
   products:any;
 
   constructor(private api: ApiService){
   }
 
   ngOnInit() {
-    this.api.getProduct()
+    this.api.getTransaction()
       .subscribe((response: any) => {
-        this.products = response;
+        this.products = response.product;
         console.log(response)
       });
   }

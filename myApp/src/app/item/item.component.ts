@@ -7,17 +7,21 @@ import { ApiService } from '../api.service';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  products:any;
+  product:any;
 
   constructor(private api: ApiService){
   }
 
   ngOnInit() {
-    this.api.getProductInfo()
+    this.api.getProductDetail()
       .subscribe((response: any) => {
-        this.products = response.product;
+        this.product = response;
         console.log(response)
       });
   }
+  postCart(){
+    this.api.postCart().subscribe((Response:any) =>{
+      console.log(Response);
+    })
+  }
 }
-

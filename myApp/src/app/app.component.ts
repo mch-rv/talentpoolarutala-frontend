@@ -1,7 +1,8 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './api.service';
+declare function decrement():any;
+declare function increment():any;
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,12 @@ import { ApiService } from './api.service';
 })
 export class AppComponent implements OnInit {
   title = 'myApp';
-  products:any;
 
-  constructor(private api: ApiService){
+  constructor(){
   }
 
-  ngOnInit() {
-    this.api.getProductInfo()
-      .subscribe((response: any) => {
-        this.products = response.product;
-        console.log(response)
-      });
+  ngOnInit():void{
+    decrement();
+    increment();
   }
 }
