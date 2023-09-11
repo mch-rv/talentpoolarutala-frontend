@@ -1,0 +1,170 @@
+<div>
+  <div class="m-10 border-slate-200 rounded-sm">
+    <header class="bg-white">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1 justify-between">
+          <div class="flex gap-5">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img
+                class="inline-block h-20 w-20 rounded-full ring-2 ring-white"
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+            </a>
+            <div class="block">
+              <div class="block">
+                <p>IStorebdg</p>
+              </div>
+              <div class="block">
+                <span>Online</span>
+                <span>Kota Bandung</span>
+              </div>
+              <div class="flex gap-2">
+                <button class="rounded border-2 border-green-500 px-7">
+                  <p>Following</p>
+                </button>
+                <button class="rounded border-2 border-green-500 px-7">
+                  <p>Following</p>
+                </button>
+                <button class="rounded border-2 border-slate-700 w-8"></button>
+                <button class="rounded border-2 border-slate-700 w-8"></button>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-5">
+            <div class="block border-r-[1px] border-slate-300 pr-3 text-center">
+              <p>5.0</p>
+              <p>Rating & Ulasan</p>
+            </div>
+            <div class="block border-r-[1px] border-slate-300 pr-3 text-center">
+              <p>± 3 jam</p>
+              <p>Pesanan diproses</p>
+            </div>
+            <div class="block pr-3 text-center">
+              <p>Buka 24 jam</p>
+              <p>Jam operasi toko</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div class="container">
+    <div class="mx-20">
+      <div class="m-10 border-slate-200 rounded-sm">
+        <button class="rounded border-2 px-7">Beranda</button>
+        <button
+          class="rounded border-b-[5px] border-green-500 text-center px-7 text-green-500 font-bold"
+        >
+          Produk
+        </button>
+        <button class="rounded border-2 px-7">Ulasan</button>
+      </div>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="shadow-lg border-slate-300 rounded-lg w-[200px] h-52 m-10">
+      <p>Etalase Toko (4)</p>
+      <div class="grid grid-cols-1 grid-rows-4">
+        <div class="p-2 bg-slate-300 rounded">
+          <button class="">Semua Produk</button>
+        </div>
+        <div class="p-2">
+          <button class="">Produk Terjual</button>
+        </div>
+        <div class="p-2">
+          <button class="">Preorder</button>
+        </div>
+        <div class="p-2">
+          <button class="">Iphone dan Aksesoris</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex justify-end items-center gap-5">
+        <span>Urutkan</span>
+        <button
+          id="dropdownDefaultButton"
+          data-dropdown-toggle="dropdown"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button"
+        >
+          Dropdown button
+          <svg
+            class="w-2.5 h-2.5 ml-2.5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div
+          id="dropdown"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownDefaultButton"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Earnings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Sign out</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <p>Semua Produk</p>
+      </div>
+      <div class="grid grid-cols-5">
+        <div class="card rounded w-52 h-52" *ngFor="let product of products">
+          <img src="{{ product.img }}" alt="" class="w-52 h-32" />
+          <a
+            routerLink="/item-component/{{ product.product_id }}"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >{{ product.product_name }}</a
+          >
+          <p class="font-bold">Rp {{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
