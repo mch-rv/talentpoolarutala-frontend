@@ -10,12 +10,13 @@
 
 <a href="mailto:asephendro63@gmail.com">kirim email ke asephendro63@gmail.com</a>
 serta cc ke
+
 - arutala.mm@gmail.com
 
 dengan format
 
 - Subtitle: `TalentPoolArutala - FRONTEND`
-- message: 
+- message:
 
 ```text
 Perkenakan diri anda, dll

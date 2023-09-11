@@ -15,7 +15,7 @@ export class CatalogueComponent implements OnInit {
   ngOnInit() {
     this.api.getProduct()
       .subscribe((response: any) => {
-        this.products = response;
+        this.products = response.product;
         console.log(response)
       });
   }
