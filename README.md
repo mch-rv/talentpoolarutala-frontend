@@ -1,4 +1,4 @@
-# Soal test maggang Backend engineer dengan Springboot
+# Soal test maggang Frontend engineer
 
 Berikut adalah soal/pertanyaan yang perlu dijawab oleh peserta maggang
 
@@ -6,31 +6,15 @@ Berikut adalah soal/pertanyaan yang perlu dijawab oleh peserta maggang
 
 1. Apa yang anda ketahui tentang Rest API?
 2. Apa yang anda ketahui tentang Server side and Client side processing?
-4. Apa yang anda ketahui tentang Design pattern Dependency Injection?
-5. Apa yang anda ketahui tentang Typescript dan Angular framework?
-6. Apa yang anda ketahui tentang Microfrontend?
+3. Apa yang anda ketahui tentang Design pattern Dependency Injection?
+4. Apa yang anda ketahui tentang Typescript dan Angular framework?
+5. Apa yang anda ketahui tentang Microfrontend?
 
-## Design modules
+## Jawaban
 
-Dalam suatu schenario ada requirement membuat aplikasi e-commerse seperti Tokopedia seperti berikut:
-
-1. Catalog, pelanggan mencari product di toko
-    ![catalog](imgs/catalog.png)
-2. Item, bisa melihat detail informasi produk
-    ![items](imgs/item.png)
-3. Cart, pelanggan bisa menambahkan produk yang ingin di beli ke keranjang
-    ![cart](imgs/cart.png)
-4. Setelah di checkout, masuk ke list transaction
-    ![list-transaction](imgs/list-transaction.png)
-5. Kita juga bisa liat detail transactionya
-    ![detail-transaction](imgs/detail-transaction.png)
-
-Kemudian temen-temen buat serta jelankan component communication terkait design UI/UX tersebut. contohnya coba breakdown componenet yang ada di module catalog trus coba dijelaskan gimana comunikasinya antara module tersebut.
-
-## Praktek
-
-Berdasarkan analisa tersebut, buat project monorepo (pada repository ini) dengan menggunakan framework [angular.io](https://angular.io/) seperti berikut specifikasinya:
-
-- Data: data yang diperoleh harus menggunakan Rest API, temen-temen boleh menggunakan dummy api seperti [mockachino](https://www.mockachino.com/), [firebase](https://firebase.google.com/) atau sejenisnya
-- CSS Framework: bebas, contohnya bootstrap, materialize-css, tailwindcss dan lain-lain
-- arhitecture: Silahkan pilih monolith atau microfrontend
+1. REST API adalah sebuah arsitektur API yang menggunakan permintaan HTTP/HTTPS untuk media pertukaran datanya.
+2. Server side processing adalah sebuah proses dimana sebuah kode dijalankan disisi server sedangkan client side processing adalah sebuah proses dimana kode dijalankan pada browser user.
+3. Design Pattern Dependency Injection adalah salah satu cara penulisan kode dimana sebuah class tidak memiliki ketergantungan yang tinggi terhadap class yang lain
+4. Typescript adalah sebuah bahasa pemrograman berbasis javascript yang memiliki tambahan berupa strong typing dan konsep OOP.
+   Angular framework adalah framework untuk membuat sebuah SPA (Single page application) menggunakan HTML dan typescript.
+5. Microfrontend adalah sebuah arsitektur dari sebuah frontend yang memungkinkan frontend aplikasi dipecah menjadi bagian kecil dan masing-masing bagiannya dapat dibuat dengan teknologi yang berbeda yang dapat di uji secara terpisah dan dapat di gunakan serta diperbarui secara independen.
